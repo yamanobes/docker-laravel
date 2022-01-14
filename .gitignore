@@ -1,0 +1,4 @@
+backend/.env
+backend/public/storage
+backend/vendor
+!.gitignore
