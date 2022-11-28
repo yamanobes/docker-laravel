@@ -1,4 +1,5 @@
-FROM php:8.0-fpm-buster
+FROM php:8.1-fpm
+EXPOSE 5173
 SHELL ["/bin/bash", "-oeux", "pipefail", "-c"]
 
 ENV COMPOSER_ALLOW_SUPERUSER=1 \
@@ -10,6 +11,7 @@ COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
 RUN apt-get update && \
     apt-get -y install git unzip libzip-dev libicu-dev libonig-dev libjpeg62-turbo-dev libpng-dev && \
     apt-get clean && \
+    apt-get install -y nodejs npm && npm install n -g && n lts && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir /var/run/php-fpm && \
     docker-php-ext-configure gd --with-jpeg &&\
