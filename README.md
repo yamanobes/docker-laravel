@@ -8,9 +8,10 @@
 
 ### app container
 
-    PHP: 8.0-fpm-buster
+    PHP: 8.1-fpm
     Composer: 2.0
-    Laravel: 8.X
+    Laravel(Breeze, Inertia): 9.X
+    Vuejs: 3.x
 
 ### db container
 
@@ -27,4 +28,4 @@
       /work# chmod -R 777 storage bootstrap/cache
       /work# exit
 
-http://127.0.0.1:8080/
+https://localhost
