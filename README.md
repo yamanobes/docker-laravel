@@ -17,6 +17,17 @@
 
     MySql: 8.0
 
+### ngrok container
+    ngrokでユーザ登録
+    https://dashboard.ngrok.com/signup
+    
+    ローカルで起動
+    $ ngrok http 8080
+
+### mailhog container
+
+    http://localhost:8025/
+
 ## 環境構築
 
     $ docker compose up -d --build
