@@ -33,8 +33,6 @@
     $ docker compose up -d --build
     $ docker compose exec app bash
       /work# composer install
-      /work# composer require laravel/breeze:^1 --dev
-      /work# php artisan breeze:install vue
       /work# cp .env.example .env
       /work# php artisan key:generate
       /work# php artisan storage:link
