@@ -33,10 +33,11 @@
     $ docker compose up -d --build
     $ docker compose exec app bash
       /work# composer install
+      /work# npm install
       /work# cp .env.example .env
       /work# php artisan key:generate
       /work# php artisan storage:link
       /work# chmod -R 777 storage bootstrap/cache
-      /work# exit
+      /work# npm run dev
 
 https://localhost
